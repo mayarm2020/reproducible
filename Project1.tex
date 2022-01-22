@@ -1,0 +1,278 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\title{Project1}
+\author{Mayar}
+\date{1/22/2022}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Project1},
+  pdfauthor={Mayar},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\begin{document}
+\maketitle
+
+\hypertarget{set-global-echo-on}{%
+\section{Set Global Echo = On}\label{set-global-echo-on}}
+
+\hypertarget{load-data}{%
+\section{Load data}\label{load-data}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if}\NormalTok{ (}\SpecialCharTok{!}\FunctionTok{file.exists}\NormalTok{(}\StringTok{"activity.csv"}\NormalTok{) )}
+\NormalTok{    \{}
+\NormalTok{     dlurl }\OtherTok{\textless{}{-}} \StringTok{\textquotesingle{}http://d396qusza40orc.cloudfront.net/repdata\%2Fdata\%2Factivity.zip\textquotesingle{}}  
+     \FunctionTok{download.file}\NormalTok{(dlurl,}\AttributeTok{destfile=}\StringTok{\textquotesingle{}repdata\%2Fdata\%2Factivity.zip\textquotesingle{}}\NormalTok{,}\AttributeTok{mode=}\StringTok{\textquotesingle{}wb\textquotesingle{}}\NormalTok{)  }
+     \FunctionTok{unzip}\NormalTok{(}\StringTok{\textquotesingle{}repdata\%2Fdata\%2Factivity.zip\textquotesingle{}}\NormalTok{)}
+\NormalTok{    \}}
+
+\CommentTok{\# Read data}
+\NormalTok{data }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"activity.csv"}\NormalTok{)  }
+
+
+\NormalTok{steps\_by\_day }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(steps }\SpecialCharTok{\textasciitilde{}}\NormalTok{ date, data, sum)}
+\FunctionTok{hist}\NormalTok{(steps\_by\_day}\SpecialCharTok{$}\NormalTok{steps, }\AttributeTok{main =} \FunctionTok{paste}\NormalTok{(}\StringTok{"Total Steps Each Day"}\NormalTok{), }\AttributeTok{col=}\StringTok{"green"}\NormalTok{,}\AttributeTok{xlab=}\StringTok{"Number of Steps"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Project1_files/figure-latex/unnamed-chunk-1-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{rmean }\OtherTok{\textless{}{-}} \FunctionTok{mean}\NormalTok{(steps\_by\_day}\SpecialCharTok{$}\NormalTok{steps)}
+\NormalTok{rmean}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 10766.19
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{rmedian }\OtherTok{\textless{}{-}} \FunctionTok{median}\NormalTok{(steps\_by\_day}\SpecialCharTok{$}\NormalTok{steps)}
+\NormalTok{rmedian}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 10765
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{steps\_by\_interval }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(steps }\SpecialCharTok{\textasciitilde{}}\NormalTok{ interval, data, mean)}
+\FunctionTok{plot}\NormalTok{(steps\_by\_interval}\SpecialCharTok{$}\NormalTok{interval,steps\_by\_interval}\SpecialCharTok{$}\NormalTok{steps, }\AttributeTok{type=}\StringTok{"l"}\NormalTok{, }\AttributeTok{xlab=}\StringTok{"Interval"}\NormalTok{, }\AttributeTok{ylab=}\StringTok{"Number of Steps"}\NormalTok{,}\AttributeTok{main=}\StringTok{"Average Number of Steps per Day by Interval"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Project1_files/figure-latex/unnamed-chunk-1-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{max\_interval }\OtherTok{\textless{}{-}}\NormalTok{ steps\_by\_interval[}\FunctionTok{which.max}\NormalTok{(steps\_by\_interval}\SpecialCharTok{$}\NormalTok{steps),}\DecValTok{1}\NormalTok{]}
+\NormalTok{max\_interval}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 835
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{NATotal }\OtherTok{\textless{}{-}} \FunctionTok{sum}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{complete.cases}\NormalTok{(data))}
+\NormalTok{NATotal}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 2304
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{StepsAverage }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(steps }\SpecialCharTok{\textasciitilde{}}\NormalTok{ interval, }\AttributeTok{data =}\NormalTok{ data, }\AttributeTok{FUN =}\NormalTok{ mean)}
+\NormalTok{fillNA }\OtherTok{\textless{}{-}} \FunctionTok{numeric}\NormalTok{()}
+\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \DecValTok{1}\SpecialCharTok{:}\FunctionTok{nrow}\NormalTok{(data)) \{}
+\NormalTok{    obs }\OtherTok{\textless{}{-}}\NormalTok{ data[i, ]}
+    \ControlFlowTok{if}\NormalTok{ (}\FunctionTok{is.na}\NormalTok{(obs}\SpecialCharTok{$}\NormalTok{steps)) \{}
+\NormalTok{        steps }\OtherTok{\textless{}{-}} \FunctionTok{subset}\NormalTok{(StepsAverage, interval }\SpecialCharTok{==}\NormalTok{ obs}\SpecialCharTok{$}\NormalTok{interval)}\SpecialCharTok{$}\NormalTok{steps}
+\NormalTok{    \} }\ControlFlowTok{else}\NormalTok{ \{}
+\NormalTok{        steps }\OtherTok{\textless{}{-}}\NormalTok{ obs}\SpecialCharTok{$}\NormalTok{steps}
+\NormalTok{    \}}
+\NormalTok{    fillNA }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(fillNA, steps)}
+\NormalTok{\}}
+
+\NormalTok{new\_activity }\OtherTok{\textless{}{-}}\NormalTok{ data}
+\NormalTok{new\_activity}\SpecialCharTok{$}\NormalTok{steps }\OtherTok{\textless{}{-}}\NormalTok{ fillNA}
+
+
+\NormalTok{StepsTotalUnion }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(steps }\SpecialCharTok{\textasciitilde{}}\NormalTok{ date, }\AttributeTok{data =}\NormalTok{ new\_activity, sum, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{hist}\NormalTok{(StepsTotalUnion}\SpecialCharTok{$}\NormalTok{steps, }\AttributeTok{main =} \FunctionTok{paste}\NormalTok{(}\StringTok{"Total Steps Each Day"}\NormalTok{), }\AttributeTok{col=}\StringTok{"blue"}\NormalTok{, }\AttributeTok{xlab=}\StringTok{"Number of Steps"}\NormalTok{)}
+\CommentTok{\#Create Histogram to show difference. }
+\FunctionTok{hist}\NormalTok{(steps\_by\_day}\SpecialCharTok{$}\NormalTok{steps, }\AttributeTok{main =} \FunctionTok{paste}\NormalTok{(}\StringTok{"Total Steps Each Day"}\NormalTok{), }\AttributeTok{col=}\StringTok{"green"}\NormalTok{, }\AttributeTok{xlab=}\StringTok{"Number of Steps"}\NormalTok{, }\AttributeTok{add=}\NormalTok{T)}
+\FunctionTok{legend}\NormalTok{(}\StringTok{"topright"}\NormalTok{, }\FunctionTok{c}\NormalTok{(}\StringTok{"Imputed"}\NormalTok{, }\StringTok{"Non{-}imputed"}\NormalTok{), }\AttributeTok{col=}\FunctionTok{c}\NormalTok{(}\StringTok{"blue"}\NormalTok{, }\StringTok{"green"}\NormalTok{), }\AttributeTok{lwd=}\DecValTok{10}\NormalTok{)}
+
+\NormalTok{rmeantotal }\OtherTok{\textless{}{-}} \FunctionTok{mean}\NormalTok{(StepsTotalUnion}\SpecialCharTok{$}\NormalTok{steps)}
+\NormalTok{rmeantotal}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 10766.19
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{rmediantotal }\OtherTok{\textless{}{-}} \FunctionTok{median}\NormalTok{(StepsTotalUnion}\SpecialCharTok{$}\NormalTok{steps)}
+\NormalTok{rmediantotal}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 10766.19
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{rmediandiff }\OtherTok{\textless{}{-}}\NormalTok{ rmediantotal }\SpecialCharTok{{-}}\NormalTok{ rmedian}
+\NormalTok{rmediandiff}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1.188679
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{rmeandiff }\OtherTok{\textless{}{-}}\NormalTok{ rmeantotal }\SpecialCharTok{{-}}\NormalTok{ rmean}
+\NormalTok{rmeandiff}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{weekdays }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Monday"}\NormalTok{, }\StringTok{"Tuesday"}\NormalTok{, }\StringTok{"Wednesday"}\NormalTok{, }\StringTok{"Thursday"}\NormalTok{, }
+              \StringTok{"Friday"}\NormalTok{)}
+\NormalTok{new\_activity}\SpecialCharTok{$}\NormalTok{dow }\OtherTok{=} \FunctionTok{as.factor}\NormalTok{(}\FunctionTok{ifelse}\NormalTok{(}\FunctionTok{is.element}\NormalTok{(}\FunctionTok{weekdays}\NormalTok{(}\FunctionTok{as.Date}\NormalTok{(new\_activity}\SpecialCharTok{$}\NormalTok{date)),weekdays), }\StringTok{"Weekday"}\NormalTok{, }\StringTok{"Weekend"}\NormalTok{))}
+\NormalTok{StepsTotalUnion }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(steps }\SpecialCharTok{\textasciitilde{}}\NormalTok{ interval }\SpecialCharTok{+}\NormalTok{ dow, new\_activity, mean)}
+\FunctionTok{library}\NormalTok{(lattice)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Project1_files/figure-latex/unnamed-chunk-1-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{xyplot}\NormalTok{(StepsTotalUnion}\SpecialCharTok{$}\NormalTok{steps }\SpecialCharTok{\textasciitilde{}}\NormalTok{ StepsTotalUnion}\SpecialCharTok{$}\NormalTok{interval}\SpecialCharTok{|}\NormalTok{StepsTotalUnion}\SpecialCharTok{$}\NormalTok{dow, }\AttributeTok{main=}\StringTok{"Average Steps per Day by Interval"}\NormalTok{,}\AttributeTok{xlab=}\StringTok{"Interval"}\NormalTok{, }\AttributeTok{ylab=}\StringTok{"Steps"}\NormalTok{,}\AttributeTok{layout=}\FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{), }\AttributeTok{type=}\StringTok{"l"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Project1_files/figure-latex/unnamed-chunk-1-4.pdf}
+
+\end{document}
