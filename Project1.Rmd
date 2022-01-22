@@ -3,8 +3,8 @@ title: "Project1"
 author: "Mayar"
 date: "1/22/2022"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 # Set Global Echo = On
@@ -84,4 +84,5 @@ library(lattice)
 xyplot(StepsTotalUnion$steps ~ StepsTotalUnion$interval|StepsTotalUnion$dow, main="Average Steps per Day by Interval",xlab="Interval", ylab="Steps",layout=c(1,2), type="l")
 
 
+print
 ```
